@@ -13,8 +13,8 @@
     "start": "webpack-dev-server --config webpack.dev.js",
     "build": "webpack --config webpack.prod.js",
     "test": "jest ./test",
-    "lint": "eslint ./src/index.jsx ./src/components/*.jsx",
-    "lint:fix": "eslint --fix ./src/index.jsx ./src/components/*.jsx"
+    "lint": "eslint ./src/index.jsx ./src/components/*.jsx ./src/components/*.jsx",
+    "lint:fix": "eslint --fix ./src/index.jsx ./src/components/*.jsx ./src/components/*.jsx"
   },
   "repository": {
     "type": "git",

@@ -1,6 +1,7 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
-const Table = props => (
+const Table = ({ data, finishTodo, delTodo }) => (
   <div className="todo-table">
     <table>
       <thead>
@@ -9,14 +10,26 @@ const Table = props => (
         </tr>
       </thead>
       <tbody>
-        {props.data.map((todo, index) => (
-          <tr className={`${todo.finished ? 'green' : 'red'}`} key={index}>
-            <td className='todo-table-name'>{todo.name}</td>
+        {data.map(todo => (
+          <tr className={`${todo.finished ? 'green' : 'red'}`} key={Math.random()}>
+            <td className="todo-table-name">{todo.name}</td>
             <td>
-              <button className='finish-button' onClick={() => props.finishTodo(todo.name)}>Done</button>
+              <button
+                className="finish-button"
+                type="button"
+                onClick={() => finishTodo(todo.name)}
+              >
+                Done
+              </button>
             </td>
             <td>
-              <button className='del-button' onClick={() => props.delTodo(todo.name)}>Del</button>
+              <button
+                className="del-button"
+                type="button"
+                onClick={() => delTodo(todo.name)}
+              >
+                Del
+              </button>
             </td>
           </tr>
         ))}
@@ -24,5 +37,11 @@ const Table = props => (
     </table>
   </div>
 );
+
+Table.propTypes = {
+  data: PropTypes.arrayOf(PropTypes.object).isRequired,
+  finishTodo: PropTypes.func.isRequired,
+  delTodo: PropTypes.func.isRequired,
+};
 
 export default Table;

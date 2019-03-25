@@ -7,7 +7,11 @@ import './styles/main.scss';
 import rootReducer from './reducers/rootReducer';
 
 // initialize store
-const store = createStore(rootReducer, window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__());
+const store = createStore(
+  rootReducer,
+  window.__REDUX_DEVTOOLS_EXTENSION__ // eslint-disable-line no-underscore-dangle
+  && window.__REDUX_DEVTOOLS_EXTENSION__(), // eslint-disable-line no-underscore-dangle
+);
 
 reactDOM.render(
   <Provider store={store}>

@@ -1,10 +1,15 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
-const Input = props => (
+const Input = ({ addFn }) => (
   <div className="input-field">
     <input className="add-input" type="text" />
-    <button onClick={props.addFn}>Set</button>
+    <button type="button" onClick={addFn}>Set</button>
   </div>
 );
+
+Input.propTypes = {
+  addFn: PropTypes.func.isRequired,
+};
 
 export default Input;

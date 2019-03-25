@@ -5,14 +5,19 @@ const Table = props => (
     <table>
       <thead>
         <tr>
-          <th>to do</th>
+          <th>What should I do?</th>
         </tr>
       </thead>
       <tbody>
         {props.data.map((todo, index) => (
-          <tr key={index}>
-            <td>{todo.name}</td>
-            <td>{todo.finished ? 'OK' : 'X'}</td>
+          <tr className={`${todo.finished ? 'green' : 'red'}`} key={index}>
+            <td className='todo-table-name'>{todo.name}</td>
+            <td>
+              <button className='finish-button' onClick={() => props.finishTodo(todo.name)}>Done</button>
+            </td>
+            <td>
+              <button className='del-button' onClick={() => props.delTodo(todo.name)}>Del</button>
+            </td>
           </tr>
         ))}
       </tbody>

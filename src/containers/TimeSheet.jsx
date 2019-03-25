@@ -1,19 +1,22 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
+import { addTodo } from '../actions/actions';
 import Input from '../components/Input';
 import Table from '../components/Table';
 
 class TimeSheet extends Component {
-
-  componentDidMount() {
-
+  addTodoBtn() {
+    console.log('addtodo');
+    const value = document.querySelector('.add-input').value;
+    value !== '' && this.props.addTodo(value);
   }
+
   render() {
     return (
       <div>
         <h1>List</h1>
-        <Input />
-        <Table data={this.props.todoList}/>
+        <Input addFn={() => { this.addTodoBtn() }} />
+        <Table data={this.props.todoList} />
       </div>
     );
   }
@@ -24,6 +27,7 @@ const mapStateToProps = store => ({
 })
 
 const mapDispatchToProps = {
+  addTodo
 };
 
 export default connect(

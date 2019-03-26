@@ -6,7 +6,7 @@ describe('App', () => {
   test('should match snapshot', () => {
     const wrapper = shallow(<App />);
 
-    expect(wrapper.find('h1').text()).toBe('lute-React App')
+    expect(wrapper.find('h1').text()).toBe('Herbert React App')
     expect(wrapper).toMatchSnapshot;
   });
 });

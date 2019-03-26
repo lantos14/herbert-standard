@@ -3,7 +3,7 @@ import TimeSheet from '../containers/TimeSheet';
 
 const App = () => (
   <div className="app-content">
-    <h1>lute-React App</h1>
+    <h1>Herbert React App</h1>
     <TimeSheet />
   </div>
 );

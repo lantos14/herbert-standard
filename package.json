@@ -1,7 +1,7 @@
 {
-  "name": "lute-react-boilerplate",
+  "name": "herbert-react-boilerplate",
   "version": "1.0.0",
-  "description": "my starter react boilerplate",
+  "description": "starter react-redux boilerplate",
   "main": "index.jsx",
   "jest": {
     "setupTestFrameworkScriptFile": "./test/enzyme.setup.js"

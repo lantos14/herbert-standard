@@ -4,12 +4,15 @@
   "description": "starter react-redux boilerplate",
   "main": "index.jsx",
   "jest": {
-    "setupFilesAfterEnv": ["./test/enzyme.setup.js"]
+    "setupFilesAfterEnv": [
+      "./test/enzyme.setup.js"
+    ]
   },
   "directories": {
     "test": "test"
   },
   "scripts": {
+    "watch": "watch 'npm run build' src",
     "start": "webpack-dev-server --config webpack.dev.js",
     "build": "webpack --config webpack.prod.js",
     "test": "jest ./test",
@@ -62,6 +65,7 @@
     "react-test-renderer": "^16.8.4",
     "sass-loader": "^7.1.0",
     "style-loader": "^0.23.1",
+    "watch": "^1.0.2",
     "webpack": "^4.29.6",
     "webpack-cli": "^3.3.0",
     "webpack-dev-server": "^3.2.1",

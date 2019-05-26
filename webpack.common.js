@@ -25,28 +25,28 @@ module.exports = {
         exclude: [/'node_modules'/],
         use: [{
           loader: 'babel-loader',
-        }]
+        }],
       },
 
       {
         test: /\.s(a|c)ss$/,
         use: [
           {
-            loader: 'style-loader'
+            loader: 'style-loader',
           },
           {
-            loader: 'css-loader'
+            loader: 'css-loader',
           },
           {
-            loader: 'sass-loader'
-          }
-        ]
+            loader: 'sass-loader',
+          },
+        ],
       },
-    ]
+    ],
   },
   plugins: [
     new HtmlWebPackPlugin({
-      template: 'index.html'
+      template: 'index.html',
     }),
     new CleanWebPackPlugin(),
     new webpack.HotModuleReplacementPlugin(),

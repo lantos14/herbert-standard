@@ -4,7 +4,9 @@
   "description": "starter react-redux boilerplate",
   "main": "index.jsx",
   "jest": {
-    "setupFilesAfterEnv": ["./test/enzyme.setup.js"]
+    "setupFilesAfterEnv": [
+      "./test/enzyme.setup.js"
+    ]
   },
   "directories": {
     "test": "test"
@@ -13,8 +15,8 @@
     "start": "webpack-dev-server --config webpack.dev.js",
     "build": "webpack --config webpack.prod.js",
     "test": "jest ./test",
-    "lint": "eslint ./src/index.jsx ./src/components/*.jsx ./src/components/*.jsx",
-    "lint:fix": "eslint --fix ./src/index.jsx ./src/components/*.jsx ./src/components/*.jsx"
+    "lint": "eslint './src/**/*.js' './src/**/*.jsx'",
+    "lint:fix": "eslint --fix './src/**/*.js' './src/**/*.jsx'"
   },
   "repository": {
     "type": "git",

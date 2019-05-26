@@ -7,7 +7,7 @@ import TodoSheet from '../components/TodoSheet';
 import testAction from '../actions/actions';
 
 const StyledButton = styled(Button)`
-  color: red;
+  background-color: red;
   border: 1px solid black;
 `;
 

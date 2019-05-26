@@ -34,6 +34,7 @@
   "homepage": "https://github.com/lantos14/lute-react-boilerplate#readme",
   "dependencies": {
     "@material-ui/core": "^4.0.0",
+    "@material-ui/styles": "^4.0.0",
     "clean-webpack-plugin": "^2.0.1",
     "html-webpack-plugin": "^3.2.0",
     "prop-types": "^15.7.2",

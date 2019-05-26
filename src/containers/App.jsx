@@ -6,7 +6,7 @@ import styled from 'styled-components';
 import testAction from '../actions/actions';
 
 const StyledButton = styled(Button)`
-  color: red;
+  background-color: red;
   border: 1px solid black;
 `;
 
@@ -15,7 +15,7 @@ const App = (props) => {
   return (
     <div className="app">
       <h1>Herbert React App</h1>
-      <StyledButton color="primary" onClick={() => testAction('success')}>Redux test</StyledButton>
+      <StyledButton onClick={() => testAction('success')}>Redux test</StyledButton>
       <p className="test-result">{testResult}</p>
     </div>
   );

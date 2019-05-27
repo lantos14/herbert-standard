@@ -16,7 +16,8 @@
     "build": "webpack --config webpack.prod.js",
     "test": "jest ./test",
     "lint": "eslint './src/**/*.js' './src/**/*.jsx'",
-    "lint:fix": "eslint --fix './src/**/*.js' './src/**/*.jsx'"
+    "lint:fix": "eslint --fix './src/**/*.js' './src/**/*.jsx'",
+    "generate": "node './generate-template.js'"
   },
   "repository": {
     "type": "git",
@@ -67,6 +68,7 @@
     "webpack": "^4.29.6",
     "webpack-cli": "^3.3.0",
     "webpack-dev-server": "^3.2.1",
-    "webpack-merge": "^4.2.1"
+    "webpack-merge": "^4.2.1",
+    "generate-template-files": "^2.1.0"
   }
 }

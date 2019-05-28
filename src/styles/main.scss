@@ -20,7 +20,7 @@ body, html {
     flex-direction: column;
     align-items: center;
 
-    .timesheet {
+    .todo-sheet {
       border: 1px black solid;
       padding: 10px;
 
@@ -30,6 +30,9 @@ body, html {
       table {
         border: 1px solid black;
         width: 100%;
+      }
+      thead {
+        display: flex;
       }
       .todo-table-name {
         border-bottom: 1px solid black;

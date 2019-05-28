@@ -5,7 +5,7 @@ const Table = ({ data, finishTodo, delTodo }) => (
   <div className="todo-table">
     <table>
       <thead>
-        <tr>
+        <tr className="table-title">
           <th>What should I do?</th>
         </tr>
       </thead>

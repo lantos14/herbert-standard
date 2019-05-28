@@ -1,5 +1,5 @@
 /* eslint-disable no-param-reassign */
-export default function Todo(state = {
+export default function todo(state = {
   list: [],
 }, action) {
   switch (action.type) {

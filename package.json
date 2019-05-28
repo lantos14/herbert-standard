@@ -33,6 +33,7 @@
   },
   "homepage": "https://github.com/lantos14/lute-react-boilerplate#readme",
   "dependencies": {
+    "@emotion/core": "^10.0.10",
     "@material-ui/core": "^4.0.0",
     "@material-ui/styles": "^4.0.0",
     "clean-webpack-plugin": "^2.0.1",

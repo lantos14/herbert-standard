@@ -1,10 +1,18 @@
-/* eslint-disable no-shadow */
+/** @jsx jsx */
 import React, { Component } from 'react';
+import { css, jsx } from '@emotion/core';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { addTodo, finishTodo, delTodo } from '../actions/actions';
 import Input from './TodoSheet/components/Input';
-import Table from './TodoSheet/components/Table';
+import Table from './TodoSheet/components/Table/Table';
+
+// emotions css string example
+const todoSheetStyle = css`
+  padding: 10px 5px;
+  margin: 30px 0;
+  border: 1px solid gray;
+`;
 
 class TodoSheet extends Component {
   addTodoBtn() {
@@ -17,7 +25,7 @@ class TodoSheet extends Component {
   render() {
     const { todoList, finishTodo, delTodo } = this.props;
     return (
-      <div className="todo-sheet">
+      <div className="todo-sheet" css={todoSheetStyle}>
         <h1>List</h1>
         <Input addFn={() => { this.addTodoBtn(); }} />
         <Table
@@ -38,7 +46,7 @@ TodoSheet.propTypes = {
 };
 
 const mapStateToProps = store => ({
-  todoList: store.Todo.list,
+  todoList: store.todo.list,
 });
 
 const mapDispatchToProps = {

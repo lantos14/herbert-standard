@@ -3,7 +3,7 @@ export default function Todo(state = {
   list: [],
 }, action) {
   switch (action.type) {
-  case 'TODO_ADD_REQUESTED': {
+  case 'TODO_ADD_SUCCEEDED': {
     const modList = JSON.parse(JSON.stringify(state.list));
     modList.push({ name: action.payload, finished: false });
     return {

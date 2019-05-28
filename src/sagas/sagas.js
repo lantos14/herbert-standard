@@ -5,7 +5,6 @@ import {
 
 function* getAPIResponse(action) {
   // call here
-  console.log('saga call here with: ', action.payload);
   try {
     yield delay(100);
     yield put({
